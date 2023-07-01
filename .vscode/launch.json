@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "Debug Android",
+      "request": "launch",
+      "type": "reactnative",
+      "cwd": "${workspaceFolder}",
+      "platform": "android"
+    },
+    {
+      "name": "Debug iOS",
+      "request": "launch",
+      "type": "reactnative",
+      "cwd": "${workspaceFolder}",
+      "platform": "ios"
+    },
+    {
+      "name": "Attach to packager",
+      "request": "attach",
+      "type": "reactnative",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
