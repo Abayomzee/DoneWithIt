@@ -1,4 +1,5 @@
 import { View, Text, Image, ImageBackground, StyleSheet } from "react-native";
+import AppButton from "../components/AppButton";
 
 export default function WelcomeScreen() {
   return (
@@ -14,11 +15,13 @@ export default function WelcomeScreen() {
             style={styles.logo}
             source={require("./../assets/logo-red.png")}
           />
-          <Text>Sell What You Don't Need</Text>
+          <Text style={styles.description}>Sell What You Don't Need</Text>
         </View>
 
-        <View style={styles.loginButton}></View>
-        <View style={styles.signUpButton}></View>
+        <View style={styles.buttonContainer}>
+          <AppButton value="login" />
+          <AppButton color="secondary" value="register" />
+        </View>
       </ImageBackground>
     </>
   );
@@ -39,14 +42,14 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
   },
-  loginButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#fc5c65",
+  description: {
+    fontSize: 20,
+    fontWeight: 600,
+    marginTop: 20,
   },
-  signUpButton: {
+  buttonContainer: {
+    padding: 20,
     width: "100%",
-    height: 70,
-    backgroundColor: "#4ECDC4",
+    gap: 20,
   },
 });
