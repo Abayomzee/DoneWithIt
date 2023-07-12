@@ -1,4 +1,4 @@
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
 const Screen = ({ children }) => {
@@ -8,8 +8,9 @@ const Screen = ({ children }) => {
 
 export default Screen;
 
-const styles = StyleSheet.compose({
+const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
+    flex: 1,
   },
 });
