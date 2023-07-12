@@ -11,21 +11,15 @@ import colors from "../config/colors";
 
 const ListItem = (props) => {
   // Props
-  const {
-    title,
-    subTitle,
-    image,
-    ImageComponent,
-    onPress,
-    renderRightActions,
-  } = props;
+  const { title, subTitle, image, IconComponent, onPress, renderRightActions } =
+    props;
 
   // Data to display
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight onPress={onPress}>
         <View style={styles.container}>
-          {ImageComponent}
+          {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View>
             <Text style={styles.title}>{title}</Text>
@@ -46,6 +40,7 @@ const styles = StyleSheet.compose({
     gap: 10,
     paddingHorizontal: 20,
     paddingVertical: 10,
+    backgroundColor: colors.white,
   },
   image: {
     height: 70,
