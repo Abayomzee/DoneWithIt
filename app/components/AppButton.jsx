@@ -1,18 +1,15 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, StyleSheet } from "react-native";
 import colors from "../config/colors";
 
 const AppButton = (props) => {
   // Props
-  const { value, children, color = "primary", onPress } = props;
+  const { value, children, color = "primary", onPress, style } = props;
 
   // Data to display
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={{
-        ...styles.button,
-        backgroundColor: colors[color],
-      }}
+      style={[styles.button, { backgroundColor: colors[color] }, style]}
     >
       <Text style={styles.text}>{value || children}</Text>
     </TouchableOpacity>
@@ -21,7 +18,7 @@ const AppButton = (props) => {
 
 export default AppButton;
 
-const styles = StyleSheet.compose({
+const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.primary,
     width: "100%",
