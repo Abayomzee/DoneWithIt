@@ -72,9 +72,9 @@ function ListingEditSreen(props) {
           <AppFormPicker
             placeholder="Category"
             name="category"
-            // numberOfColumns={3}
+            numberOfColumns={3}
             items={categories}
-            // PickerItemComponent={CategoryPickerItem}
+            PickerItemComponent={CategoryPickerItem}
           />
           <AppFormField
             placeholder="Description"
