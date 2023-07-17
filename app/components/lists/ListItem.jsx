@@ -7,12 +7,20 @@ import {
 } from "react-native";
 import { Swipeable } from "react-native-gesture-handler";
 
-import colors from "../config/colors";
+import colors from "../../config/colors";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const ListItem = (props) => {
   // Props
-  const { title, subTitle, image, IconComponent, onPress, renderRightActions } =
-    props;
+  const {
+    title,
+    subTitle,
+    image,
+    IconComponent,
+    onPress,
+    renderRightActions,
+    showChevrons,
+  } = props;
 
   // Data to display
   return (
@@ -21,9 +29,24 @@ const ListItem = (props) => {
         <View style={styles.container}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
-          <View>
-            <Text style={styles.title}>{title}</Text>
-            {subTitle && <Text style={styles.subTitle}>{subTitle}</Text>}
+          <View style={styles.contentContainer}>
+            <View style={styles.contentTexts}>
+              <Text style={styles.title} numberOfLines={1}>
+                {title}
+              </Text>
+              {subTitle && (
+                <Text style={styles.subTitle} numberOfLines={2}>
+                  {subTitle}
+                </Text>
+              )}
+            </View>
+            {showChevrons && (
+              <MaterialCommunityIcons
+                name="chevron-right"
+                size={20}
+                color={colors.medium}
+              />
+            )}
           </View>
         </View>
       </TouchableHighlight>
@@ -41,6 +64,15 @@ const styles = StyleSheet.compose({
     paddingHorizontal: 20,
     paddingVertical: 10,
     backgroundColor: colors.white,
+  },
+  contentContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    flex: 1,
+  },
+  contentTexts: {
+    flex: 1,
   },
   image: {
     height: 70,

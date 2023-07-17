@@ -11,7 +11,7 @@ const validationSchema = yup.object().shape({
   password: yup.string().required().min(4).label("Password"),
 });
 
-function LoginScreen(props) {
+function RegisterSreen(props) {
   return (
     <Screen>
       <Container>
@@ -20,10 +20,16 @@ function LoginScreen(props) {
           source={require("./../assets/logo-red.png")}
         />
         <AppForm
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ name: "", email: "", password: "" }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
+          <AppFormField
+            icon="account"
+            placeholder="Name"
+            name="name"
+            autoCorrect={false}
+          />
           <AppFormField
             icon="email"
             placeholder="Email"
@@ -43,7 +49,7 @@ function LoginScreen(props) {
             secureTextEntry
           />
 
-          <SubmitButton value="Login" style={{ marginTop: 40 }} />
+          <SubmitButton value="Register" style={{ marginTop: 40 }} />
         </AppForm>
       </Container>
     </Screen>
@@ -59,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default RegisterSreen;

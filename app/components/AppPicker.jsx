@@ -45,6 +45,7 @@ function AppPicker({ icon, items, placeholder, selected, onSelected }) {
           />
         </View>
       </TouchableWithoutFeedback>
+      {/* List Items Modal */}
       <Modal visible={showOptions} animationType="fade">
         <Screen>
           <Container>
