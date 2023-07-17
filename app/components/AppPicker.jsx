@@ -15,7 +15,15 @@ import Screen from "./Screen";
 import Container from "./Container";
 import PickerItem from "./PickerItem";
 
-function AppPicker({ icon, items, placeholder, selected, onSelected }) {
+function AppPicker({
+  icon,
+  items,
+  placeholder,
+  selected,
+  onSelected,
+  numberOfColumns = 1,
+  PickerItemComponent = PickerItem,
+}) {
   // States
   const [showOptions, setShowOptions] = useState(false);
 
@@ -46,16 +54,17 @@ function AppPicker({ icon, items, placeholder, selected, onSelected }) {
         </View>
       </TouchableWithoutFeedback>
       {/* List Items Modal */}
-      <Modal visible={showOptions} animationType="fade">
+      <Modal visible={showOptions} animationType="slide">
         <Screen>
           <Container>
             <Button onPress={() => setShowOptions(false)} title="Close modal" />
             <FlatList
               data={items}
               keyExtractor={(item) => item.value.toString()}
+              numColumns={numberOfColumns}
               renderItem={({ item }) => (
-                <PickerItem
-                  label={item.label}
+                <PickerItemComponent
+                  item={item}
                   onPress={() => {
                     setShowOptions(false);
                     onSelected(item);
