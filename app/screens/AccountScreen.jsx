@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, View } from "react-native";
 import Icon from "../components/Icon";
 import ItemSeperator from "../components/lists/ItemSeperator";
 
-import ListItem from "../components/ListItem";
+import ListItem from "../components/lists/ListItem";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 
