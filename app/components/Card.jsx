@@ -1,19 +1,27 @@
-import { Image, Text, View, StyleSheet } from "react-native";
+import {
+  Image,
+  Text,
+  View,
+  StyleSheet,
+  TouchableWithoutFeedback,
+} from "react-native";
 import colors from "../config/colors";
 
 const Card = (props) => {
   // Props
-  const { title, subTitle, image } = props;
+  const { title, subTitle, image, onPress } = props;
 
   // Data to display
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
-      <View style={styles.bottom}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subTitle}>{subTitle}</Text>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image} />
+        <View style={styles.bottom}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subTitle}>{subTitle}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -24,6 +32,7 @@ const styles = StyleSheet.compose({
     backgroundColor: "#fff",
     borderRadius: 20,
     overflow: "hidden",
+    marginBottom: 20,
   },
   image: {
     borderTopLeftRadius: 20,

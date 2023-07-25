@@ -3,14 +3,15 @@ import ListItem from "../components/lists/ListItem";
 
 import colors from "../config/colors";
 
-const ListingDetailsScreen = (props) => {
+const ListingDetailsScreen = ({ route }) => {
+  const item = route.params;
   // Data to display
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("./../assets/jacket.jpg")} />
+      <Image style={styles.image} source={item.image} />
       <View style={styles.bottom}>
-        <Text style={styles.title}>Red jacket for sale</Text>
-        <Text style={styles.price}>{"$100"}</Text>
+        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.price}>{item.price}</Text>
         <View style={styles.listItemContainer}>
           <ListItem
             image={require("./../assets/mosh.jpg")}

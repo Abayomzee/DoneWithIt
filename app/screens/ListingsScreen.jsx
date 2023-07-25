@@ -16,10 +16,10 @@ const listings = [
     id: 2,
     title: "Couch in great conditions",
     price: 1000,
-    image: require("./../assets/jacket.jpg"),
+    image: require("./../assets/couch.jpg"),
   },
 ];
-function ListingsScreen(props) {
+function ListingsScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <Container>
@@ -31,6 +31,7 @@ function ListingsScreen(props) {
               title={item.title}
               subTitle={`$ ${item.price}`}
               image={item.image}
+              onPress={() => navigation.navigate("ListingDetails", item)}
             />
           )}
         />
@@ -43,7 +44,7 @@ export default ListingsScreen;
 
 const styles = StyleSheet.create({
   screen: {
-    padding: 10,
+    // padding: 10,
     backgroundColor: colors.light,
   },
 });
