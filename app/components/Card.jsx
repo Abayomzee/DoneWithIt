@@ -9,13 +9,13 @@ import colors from "../config/colors";
 
 const Card = (props) => {
   // Props
-  const { title, subTitle, image, onPress } = props;
+  const { title, subTitle, imageUrl, onPress } = props;
 
   // Data to display
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
-        <Image style={styles.image} source={image} />
+        <Image style={styles.image} source={{ uri: imageUrl }} />
         <View style={styles.bottom}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
