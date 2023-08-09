@@ -7,24 +7,15 @@ import Container from "../components/Container";
 import listingsApi from "./../api/listings";
 import AppButton from "../components/AppButton";
 import ActivityIndicator from "../components/ActivityIndicator";
+import useApi from "../hooks/useApi";
 
 function ListingsScreen({ navigation }) {
-  // State
-  const [listings, setListings] = useState([]);
-  const [errors, setErrors] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  // Methods
-  const loadListings = async () => {
-    setLoading(true);
-    const response = await listingsApi.getListings();
-    setLoading(false);
-
-    if (!response.ok) return setErrors(true);
-
-    setErrors(false);
-    setListings(response.data);
-  };
+  const {
+    request: loadListings,
+    data: listings,
+    errors,
+    loading,
+  } = useApi(listingsApi.getListings);
 
   // Effects
   useEffect(() => {

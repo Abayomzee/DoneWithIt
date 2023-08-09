@@ -9,11 +9,12 @@ import AppFormPicker from "../components/forms/AppFormPicker";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 import AppFormImagePicker from "../components/forms/AppFormImagePicker";
 import useLocation from "../hooks/useLocation";
+import listingsApi from "./../api/listings";
 
 const validationSchema = yup.object().shape({
   title: yup.string().required().min(1).label("Title"),
   price: yup.string().required().min(1).max(10000).label("Price"),
-  description: yup.string().required().label("Description"),
+  description: yup.string().label("Description"),
   category: yup.object().required().nullable().label("Category"),
   images: yup.array().min(1, "Please select at least on image"),
 });
@@ -52,6 +53,22 @@ const categories = [
 
 function ListingEditSreen(props) {
   const location = useLocation();
+
+  // Methods
+  const handleSubmit = async (listing) => {
+    const result = await listingsApi.addListings(
+      { ...listing, location },
+      (progress) => console.log(progress)
+    );
+
+    if (!result.ok) {
+      console.log(result.problem);
+      return alert("Could not save listing.");
+    }
+    alert("Success");
+  };
+
+  // Data to display
   return (
     <Screen>
       <Container>
@@ -63,7 +80,7 @@ function ListingEditSreen(props) {
             description: "",
             images: [],
           }}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={handleSubmit}
           validationSchema={validationSchema}
         >
           <AppFormImagePicker name="images" />
