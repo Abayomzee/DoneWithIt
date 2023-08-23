@@ -1,4 +1,5 @@
-import { Image, View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
+import { Image } from "react-native-expo-image-cache";
 import ListItem from "../components/lists/ListItem";
 
 import colors from "../config/colors";
@@ -8,7 +9,12 @@ const ListingDetailsScreen = ({ route }) => {
   // Data to display
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={item.image} />
+      <Image
+        style={styles.image}
+        tint="light"
+        preview={item.images[0].thumbnailUrl}
+        uri={item.images[0].url}
+      />
       <View style={styles.bottom}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>{item.price}</Text>

@@ -1,21 +1,21 @@
-import {
-  Image,
-  Text,
-  View,
-  StyleSheet,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { Text, View, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { Image } from "react-native-expo-image-cache";
 import colors from "../config/colors";
 
 const Card = (props) => {
   // Props
-  const { title, subTitle, imageUrl, onPress } = props;
+  const { title, subTitle, imageUrl, onPress, thumbnailUrl } = props;
 
   // Data to display
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
-        <Image style={styles.image} source={{ uri: imageUrl }} />
+        <Image
+          style={styles.image}
+          tint="light"
+          preview={thumbnailUrl}
+          uri={imageUrl}
+        />
         <View style={styles.bottom}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
