@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "DoneWithItNow",
-    "slug": "DoneWithItNow",
+    "slug": "donewithit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -11,7 +11,9 @@
       "resizeMode": "cover",
       "backgroundColor": "#e63c4b"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -23,6 +25,12 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6e9250cf-fcc4-43f3-8af7-7b6abd523261"
+      }
+    },
+    "owner": "abayomzee"
   }
 }

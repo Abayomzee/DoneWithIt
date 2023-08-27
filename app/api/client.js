@@ -2,7 +2,7 @@ import { create } from "apisauce";
 import cache from "../utils/cache";
 import authStorate from "./../auth/storage";
 
-const apiClient = create({ baseURL: "http://192.168.8.102:9000/api" });
+const apiClient = create({ baseURL: "http://192.168.8.101:9000/api" });
 
 apiClient.addAsyncRequestTransform(async (request) => {
   const authToken = await authStorate.getToken();
