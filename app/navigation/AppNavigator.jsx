@@ -33,6 +33,7 @@ const AppNavigator = () => {
     Notifications.addNotificationReceivedListener((notification) =>
       console.log(notification)
     );
+    
     Notifications.addNotificationResponseReceivedListener((notification) =>
       console.log(notification)
     );
