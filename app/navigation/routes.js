@@ -1,6 +1,6 @@
 export default Object.freeze({
-  ACCOUNT: "Account",
   FEED: "Feed",
+  ACCOUNT: "Account",
   LISTING_EDIT: "ListingEdit",
   LOGIN: "Login",
   REGISTER: "Register",
