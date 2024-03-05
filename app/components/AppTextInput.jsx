@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     padding: 12,
+    gap: 6,
     backgroundColor: defaultStyles.colors.light,
     alignItems: "center",
     flexDirection: "row",
-    gap: 6,
     borderRadius: 25,
     marginVertical: 10,
   },
