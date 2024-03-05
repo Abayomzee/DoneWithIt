@@ -4,8 +4,8 @@ import { Formik } from "formik";
 function AppForm({ children, initialValues, onSubmit, validationSchema }) {
   return (
     <Formik
-      initialValues={initialValues}
       onSubmit={onSubmit}
+      initialValues={initialValues}
       validationSchema={validationSchema}
     >
       {() => <>{children}</>}
