@@ -15,8 +15,8 @@ function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
           {imageUris.map((uri) => (
             <ImageInput
               key={uri}
-              imageUri={uri}
               onChangeImage={() => onRemoveImage(uri)}
+              imageUri={uri}
             />
           ))}
 
