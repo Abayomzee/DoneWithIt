@@ -27,8 +27,8 @@ function AppTextInput({ icon, placeholder, ...otherProps }) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    backgroundColor: defaultStyles.colors.light,
     padding: 12,
+    backgroundColor: defaultStyles.colors.light,
     alignItems: "center",
     flexDirection: "row",
     gap: 6,
