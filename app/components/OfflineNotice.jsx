@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     justifyContent: "cener",
     alignItems: "center",
     paddingTop: 10,
-    top: Constants.statusBarHeight,
     paddingBottom: 10,
+    top: Constants.statusBarHeight,
     zIndex: 1,
   },
   text: {
