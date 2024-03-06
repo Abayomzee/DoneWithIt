@@ -19,6 +19,7 @@ function OfflineNotice() {
 
 const styles = StyleSheet.create({
   container: {
+    zIndex: 1,
     backgroundColor: colors.primary,
     // height: 50,
     width: "100%",
@@ -27,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 10,
     paddingBottom: 10,
-    zIndex: 1,
     top: Constants.statusBarHeight,
   },
   text: {
