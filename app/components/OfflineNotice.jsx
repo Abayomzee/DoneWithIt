@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 10,
     paddingBottom: 10,
-    top: Constants.statusBarHeight,
     zIndex: 1,
+    top: Constants.statusBarHeight,
   },
   text: {
     color: colors.white,
