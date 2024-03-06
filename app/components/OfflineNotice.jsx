@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
   container: {
     zIndex: 1,
     backgroundColor: colors.primary,
-    // height: 50,
     width: "100%",
+    // height: 50,
     position: "absolute",
     justifyContent: "cener",
     alignItems: "center",
