@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
   container: {
     zIndex: 1,
     backgroundColor: colors.primary,
-    paddingTop: 10,
-    // height: 50,
     width: "100%",
+    // height: 50,
+    paddingTop: 10,
     paddingBottom: 10,
     alignItems: "center",
     position: "absolute",
