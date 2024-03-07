@@ -19,8 +19,8 @@ function OfflineNotice() {
 
 const styles = StyleSheet.create({
   container: {
-    zIndex: 1,
     width: "100%",
+    zIndex: 1,
     // height: 50,
     paddingTop: 10,
     paddingBottom: 10,
