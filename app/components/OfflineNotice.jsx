@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     width: "100%",
     position: "absolute",
     justifyContent: "cener",
-    alignItems: "center",
     paddingBottom: 10,
+    alignItems: "center",
     top: Constants.statusBarHeight,
   },
   text: {
