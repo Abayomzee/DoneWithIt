@@ -2,10 +2,10 @@ import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import AppLoading from "expo-app-loading";
 
-import navigationTheme from "./app/navigation/navigationTheme";
-import AppNavigator from "./app/navigation/AppNavigator";
 import authStorage from "./app/auth/storage";
 import AuthContext from "./app/auth/context";
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 import OfflineNotice from "./app/components/OfflineNotice";
 import AuthNavigator from "./app/navigation/AuthNavigator";
 
