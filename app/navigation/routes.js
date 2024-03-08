@@ -3,8 +3,8 @@ export default Object.freeze({
   LOGIN: "Login",
   WELCOME: "welcome",
   ACCOUNT: "Account",
-  LISTING_EDIT: "ListingEdit",
   REGISTER: "Register",
+  LISTING_EDIT: "ListingEdit",
   LISTINGS: "Listings",
   LISTING_DETAILS: "ListingDetails",
 });
