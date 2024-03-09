@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import AppLoading from "expo-app-loading";
+import { NavigationContainer } from "@react-navigation/native";
 
 import authStorage from "./app/auth/storage";
 import AuthContext from "./app/auth/context";
