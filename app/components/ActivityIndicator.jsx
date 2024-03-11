@@ -7,10 +7,10 @@ function ActivityIndicator({ visible }) {
   return (
     <View
       style={{
-        position: "absolute",
         top: 0,
-        backgroundColor: "white",
         width: "100%",
+        position: "absolute",
+        backgroundColor: "white",
         height: "100%",
         zIndex: 1,
         opacity: 0.7,
