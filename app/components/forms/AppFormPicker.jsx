@@ -6,8 +6,8 @@ import PickerItem from "../PickerItem";
 import ErrorMessage from "./ErrorMessage";
 
 function AppFormPicker({
-  items,
   name,
+  items,
   placeholder,
   PickerItemComponent = PickerItem,
   numberOfColumns,
