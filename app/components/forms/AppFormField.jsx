@@ -5,9 +5,9 @@ import ErrorMessage from "./ErrorMessage";
 
 function AppFormField({ name, ...otherProps }) {
   const {
+    errors,
     values,
     touched,
-    errors,
     setFieldValue,
     setFieldTouched,
   } = useFormikContext();
