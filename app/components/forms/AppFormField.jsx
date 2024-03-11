@@ -15,8 +15,8 @@ function AppFormField({ name, ...otherProps }) {
   return (
     <>
       <AppTextInput
-        onChangeText={(text) => setFieldValue(name, text)}
         value={values[name]}
+        onChangeText={(text) => setFieldValue(name, text)}
         onBlur={() => setFieldTouched(name)}
         {...otherProps}
       />
