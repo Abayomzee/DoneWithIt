@@ -19,8 +19,8 @@ function AppFormPicker({
         items={items}
         selected={values[name]}
         placeholder={placeholder}
-        onSelected={(item) => setFieldValue(name, item)}
         PickerItemComponent={PickerItemComponent}
+        onSelected={(item) => setFieldValue(name, item)}
         numberOfColumns={numberOfColumns}
       />
       <ErrorMessage error={errors[name]} visible={touched[name]} />
