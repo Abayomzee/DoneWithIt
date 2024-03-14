@@ -12,8 +12,8 @@ function ActivityIndicator({ visible }) {
         height: "100%",
         zIndex: 1,
         position: "absolute",
-        backgroundColor: "white",
         opacity: 0.7,
+        backgroundColor: "white",
       }}
     >
       <LottieView
