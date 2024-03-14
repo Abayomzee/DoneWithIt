@@ -10,8 +10,8 @@ function ActivityIndicator({ visible }) {
         top: 0,
         width: "100%",
         zIndex: 1,
-        height: "100%",
         opacity: 0.7,
+        height: "100%",
         position: "absolute",
         backgroundColor: "white",
       }}
