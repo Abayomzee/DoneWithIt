@@ -22,8 +22,8 @@ function ActivityIndicator({ visible }) {
         style={{
           width: 200,
           height: 200,
-          alignSelf: "center",
           marginTop: 80,
+          alignSelf: "center",
         }}
         source={require("../assets/animations/loader.json")}
       />
