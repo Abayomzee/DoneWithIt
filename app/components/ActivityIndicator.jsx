@@ -20,8 +20,8 @@ function ActivityIndicator({ visible }) {
         loop
         autoPlay
         style={{
-          width: 200,
           alignSelf: "center",
+          width: 200,
           height: 200,
           marginTop: 80,
         }}
