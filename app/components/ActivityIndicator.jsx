@@ -21,8 +21,8 @@ function ActivityIndicator({ visible }) {
         autoPlay
         style={{
           width: 200,
-          alignSelf: "center",
           height: 200,
+          alignSelf: "center",
           marginTop: 80,
         }}
         source={require("../assets/animations/loader.json")}
