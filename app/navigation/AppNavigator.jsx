@@ -5,8 +5,8 @@ import * as Permissions from "expo-permissions";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import FeedNavigator from "./FeedNavigation";
-import ListingEditSreen from "../screens/ListingEditScreen";
 import AccountNavigator from "./AccountNavigator";
+import ListingEditSreen from "../screens/ListingEditScreen";
 import NewListingButton from "./NewListingButton";
 import expoPushTokensApi from "./../api/expoPushTokens";
 import routes from "./routes";
