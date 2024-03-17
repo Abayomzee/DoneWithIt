@@ -8,8 +8,8 @@ import ListingEditSreen from "../screens/ListingEditScreen";
 import FeedNavigator from "./FeedNavigation";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
-import routes from "./routes";
 import expoPushTokensApi from "./../api/expoPushTokens";
+import routes from "./routes";
 
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => {
