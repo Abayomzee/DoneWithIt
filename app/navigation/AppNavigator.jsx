@@ -4,8 +4,8 @@ import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 
 import ListingEditSreen from "../screens/ListingEditScreen";
-import FeedNavigator from "./FeedNavigation";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import FeedNavigator from "./FeedNavigation";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
 import routes from "./routes";
