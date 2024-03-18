@@ -8,8 +8,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeedNavigator from "./FeedNavigation";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
-import routes from "./routes";
 import expoPushTokensApi from "./../api/expoPushTokens";
+import routes from "./routes";
 import ListingEditSreen from "../screens/ListingEditScreen";
 
 const Tab = createBottomTabNavigator();
