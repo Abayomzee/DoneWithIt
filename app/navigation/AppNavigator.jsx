@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
 import * as Permissions from "expo-permissions";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as Notifications from "expo-notifications";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import FeedNavigator from "./FeedNavigation";
