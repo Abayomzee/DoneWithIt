@@ -5,8 +5,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import * as Notifications from "expo-notifications";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import routes from "./routes";
 import FeedNavigator from "./FeedNavigation";
+import routes from "./routes";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
 import expoPushTokensApi from "./../api/expoPushTokens";
