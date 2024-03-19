@@ -6,10 +6,10 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import FeedNavigator from "./FeedNavigation";
-import routes from "./routes";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
 import expoPushTokensApi from "./../api/expoPushTokens";
+import routes from "./routes";
 import ListingEditSreen from "../screens/ListingEditScreen";
 
 const Tab = createBottomTabNavigator();
